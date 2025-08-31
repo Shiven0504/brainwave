@@ -3,6 +3,7 @@ import { fontFamily } from "tailwindcss/defaultTheme";
 import plugin from "tailwindcss/plugin";
 
 export default {
+  //  Scan these files for Tailwind class usage
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -10,6 +11,7 @@ export default {
   ],
   theme: {
     extend: {
+      //  Custom color palette
       colors: {
         color: {
           1: "#AC6AFF",
@@ -38,28 +40,40 @@ export default {
           13: "#6C7275",
         },
       },
+
+      //  Fonts
       fontFamily: {
         sans: ["var(--font-sora)", ...fontFamily.sans],
         code: "var(--font-code)",
         grotesk: "var(--font-grotesk)",
       },
+
+      //  Typography tweaks
       letterSpacing: {
         tagline: ".15em",
       },
+
+      //  Custom spacing scale
       spacing: {
         0.25: "0.0625rem",
         7.5: "1.875rem",
         15: "3.75rem",
       },
+
+      //  Additional opacity level
       opacity: {
         15: ".15",
       },
+
+      //  Transitions
       transitionDuration: {
         DEFAULT: "200ms",
       },
       transitionTimingFunction: {
         DEFAULT: "linear",
       },
+
+      //  Custom z-index scale
       zIndex: {
         1: "1",
         2: "2",
@@ -67,13 +81,19 @@ export default {
         4: "4",
         5: "5",
       },
+
+      // Border width
       borderWidth: {
         DEFAULT: "0.0625rem",
       },
+
+      // 🖼 Backgrounds
       backgroundImage: {
         "radial-gradient": "radial-gradient(var(--tw-gradient-stops))",
         "conic-gradient":
           "conic-gradient(from 225deg, #FFC876, #79FFF7, #9F53FF, #FF98E2, #FFC876)",
+
+        //  Benefit cards
         "benefit-card-1": "url(assets/benefits/card-1.svg)",
         "benefit-card-2": "url(assets/benefits/card-2.svg)",
         "benefit-card-3": "url(assets/benefits/card-3.svg)",
@@ -83,9 +103,14 @@ export default {
       },
     },
   },
+
+  //  Custom plugins
   plugins: [
     plugin(function ({ addBase, addComponents, addUtilities }) {
+      // Base styles
       addBase({});
+
+      // Reusable components (typography, container, etc.)
       addComponents({
         ".container": {
           "@apply max-w-[77.5rem] mx-auto px-5 md:px-10 lg:px-15 xl:max-w-[87.5rem]":
@@ -132,6 +157,8 @@ export default {
           "@apply font-code text-xs font-bold uppercase tracking-wider": {},
         },
       });
+
+      // Utility classes
       addUtilities({
         ".tap-highlight-color": {
           "-webkit-tap-highlight-color": "rgba(0, 0, 0, 0)",
