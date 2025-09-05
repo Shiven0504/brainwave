@@ -1,14 +1,19 @@
 {
   "name": "brainwave",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1", 
+  "//": "Incremented version for clarity. No functional impact.",
   "type": "module",
+
+  "//scripts": "Project commands for development lifecycle",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
+
+  "//dependencies": "Runtime libraries required by the app",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -16,6 +21,8 @@
     "react-router-dom": "^6.22.3",
     "scroll-lock": "^2.1.5"
   },
+
+  "//devDependencies": "Tools for development (not bundled in production)",
   "devDependencies": {
     "@types/react": "^18.2.56",
     "@types/react-dom": "^18.2.19",
@@ -28,5 +35,15 @@
     "postcss": "^8.4.35",
     "tailwindcss": "^3.4.1",
     "vite": "^5.1.4"
+  },
+
+  "//notes": "Custom field for documentation or team info",
+  "meta": {
+    "author": "Your Name",
+    "lastUpdated": "2025-08-30",
+    "changelog": [
+      "v0.0.1 - Added safe comments in package.json",
+      "No impact on website functionality"
+    ]
   }
 }
